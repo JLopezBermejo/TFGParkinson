@@ -1,0 +1,54 @@
+KurtosisTest de la columna :MDVP:Fo(Hz)
+pvalor= 0.011875117260038788
+KurtosisTest de la columna :MDVP:Fhi(Hz)
+pvalor= 4.935096395062021e-10
+KurtosisTest de la columna :MDVP:Flo(Hz)
+pvalor= 0.09330047673931735
+KurtosisTest de la columna :MDVP:Jitter(%)
+pvalor= 1.0442039617840122e-12
+KurtosisTest de la columna :MDVP:Jitter(Abs)
+pvalor= 4.242378718086615e-12
+KurtosisTest de la columna :MDVP:RAP
+pvalor= 1.023807024596679e-13
+KurtosisTest de la columna :MDVP:PPQ
+pvalor= 1.1282402248250713e-12
+KurtosisTest de la columna :Jitter:DDP
+pvalor= 1.012827962934764e-13
+KurtosisTest de la columna :MDVP:Shimmer
+pvalor= 9.571535278396596e-06
+KurtosisTest de la columna :MDVP:Shimmer(dB)
+pvalor= 6.875091449382297e-08
+KurtosisTest de la columna :Shimmer:APQ3
+pvalor= 4.767756297867252e-05
+KurtosisTest de la columna :Shimmer:APQ5
+pvalor= 1.566943995797579e-06
+KurtosisTest de la columna :MDVP:APQ
+pvalor= 2.9376839379462037e-12
+KurtosisTest de la columna :Shimmer:DDA
+pvalor= 4.75993753388172e-05
+KurtosisTest de la columna :NHR
+pvalor= 2.273715938291115e-16
+KurtosisTest de la columna :HNR
+pvalor= 0.10820118650767349
+KurtosisTest de la columna :status
+pvalor= 0.02029177767388102
+KurtosisTest de la columna :RPDE
+pvalor= 1.0181747174420626e-06
+KurtosisTest de la columna :DFA
+pvalor= 0.003826311804631507
+KurtosisTest de la columna :spread1
+pvalor= 0.9975246934587328
+KurtosisTest de la columna :spread2
+pvalor= 0.9145519102974735
+KurtosisTest de la columna :D2
+pvalor= 0.4529561866931672
+KurtosisTest de la columna :PPE
+pvalor= 0.150960893140275
+
+
+ KurtosisTest del dataset entero: [1.18751173e-02 4.93509640e-10 9.33004767e-02 1.04420396e-12
+ 4.24237872e-12 1.02380702e-13 1.12824022e-12 1.01282796e-13
+ 9.57153528e-06 6.87509145e-08 4.76775630e-05 1.56694400e-06
+ 2.93768394e-12 4.75993753e-05 2.27371594e-16 1.08201187e-01
+ 2.02917777e-02 1.01817472e-06 3.82631180e-03 9.97524693e-01
+ 9.14551910e-01 4.52956187e-01 1.50960893e-01]

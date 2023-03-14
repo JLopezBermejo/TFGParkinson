@@ -1,0 +1,184 @@
+Estadísticas de la columna :MDVP:Fo(Hz)
+IQR:65.197
+Upper Bound: 280.5645
+Lower Bound: 19.7765
+percentage outliers: 0.0
+total outliers: 0
+
+
+Estadísticas de la columna :MDVP:Fhi(Hz)
+IQR:89.34299999999999
+Upper Bound: 358.22
+Lower Bound: 0.8480000000000132
+percentage outliers: 5.641025641025641
+total outliers: 11
+
+
+Estadísticas de la columna :MDVP:Flo(Hz)
+IQR:55.72750000000002
+Upper Bound: 223.60975000000005
+Lower Bound: 0.6997499999999661
+percentage outliers: 4.615384615384616
+total outliers: 9
+
+
+Estadísticas de la columna :MDVP:Jitter(%)
+IQR:0.003905
+Upper Bound: 0.0132225
+Lower Bound: -0.0023975
+percentage outliers: 7.179487179487179
+total outliers: 14
+
+
+Estadísticas de la columna :MDVP:Jitter(Abs)
+IQR:3.9999999999999996e-05
+Upper Bound: 0.00011999999999999999
+Lower Bound: -3.9999999999999996e-05
+percentage outliers: 3.5897435897435894
+total outliers: 7
+
+
+Estadísticas de la columna :MDVP:RAP
+IQR:0.002175
+Upper Bound: 0.0070975
+Lower Bound: -0.0016024999999999998
+percentage outliers: 7.179487179487179
+total outliers: 14
+
+
+Estadísticas de la columna :MDVP:PPQ
+IQR:0.002095
+Upper Bound: 0.0070975000000000005
+Lower Bound: -0.0012825000000000002
+percentage outliers: 7.6923076923076925
+total outliers: 15
+
+
+Estadísticas de la columna :Jitter:DDP
+IQR:0.0065200000000000015
+Upper Bound: 0.021285000000000005
+Lower Bound: -0.004795000000000002
+percentage outliers: 7.179487179487179
+total outliers: 14
+
+
+Estadísticas de la columna :MDVP:Shimmer
+IQR:0.021380000000000003
+Upper Bound: 0.069955
+Lower Bound: -0.015565000000000002
+percentage outliers: 4.102564102564102
+total outliers: 8
+
+
+Estadísticas de la columna :MDVP:Shimmer(dB)
+IQR:0.20149999999999998
+Upper Bound: 0.65225
+Lower Bound: -0.15374999999999997
+percentage outliers: 5.128205128205128
+total outliers: 10
+
+
+Estadísticas de la columna :Shimmer:APQ3
+IQR:0.012019999999999998
+Upper Bound: 0.038294999999999996
+Lower Bound: -0.009784999999999997
+percentage outliers: 3.076923076923077
+total outliers: 6
+
+
+Estadísticas de la columna :Shimmer:APQ5
+IQR:0.0128
+Upper Bound: 0.041580000000000006
+Lower Bound: -0.009620000000000002
+percentage outliers: 6.666666666666667
+total outliers: 13
+
+
+Estadísticas de la columna :MDVP:APQ
+IQR:0.01632
+Upper Bound: 0.05388
+Lower Bound: -0.011400000000000002
+percentage outliers: 6.153846153846154
+total outliers: 12
+
+
+Estadísticas de la columna :Shimmer:DDA
+IQR:0.03606
+Upper Bound: 0.114885
+Lower Bound: -0.029355
+percentage outliers: 3.076923076923077
+total outliers: 6
+
+
+Estadísticas de la columna :NHR
+IQR:0.019715
+Upper Bound: 0.0552125
+Lower Bound: -0.023647500000000002
+percentage outliers: 9.743589743589745
+total outliers: 19
+
+
+Estadísticas de la columna :HNR
+IQR:5.877499999999998
+Upper Bound: 33.891749999999995
+Lower Bound: 10.381750000000004
+percentage outliers: 1.5384615384615385
+total outliers: 3
+
+
+Estadísticas de la columna :status
+IQR:0.0
+Upper Bound: 1.0
+Lower Bound: 1.0
+percentage outliers: 24.615384615384617
+total outliers: 48
+
+
+Estadísticas de la columna :RPDE
+IQR:0.16625649999999997
+Upper Bound: 0.8369472499999999
+Lower Bound: 0.17192125000000005
+percentage outliers: 0.0
+total outliers: 0
+
+
+Estadísticas de la columna :DFA
+IQR:0.08712399999999998
+Upper Bound: 0.8925675
+Lower Bound: 0.5440715
+percentage outliers: 0.0
+total outliers: 0
+
+
+Estadísticas de la columna :spread1
+IQR:1.4039040000000007
+Upper Bound: -2.9403359999999985
+Lower Bound: -8.555952000000001
+percentage outliers: 2.051282051282051
+total outliers: 4
+
+
+Estadísticas de la columna :spread2
+IQR:0.10488349999999996
+Upper Bound: 0.43655924999999995
+Lower Bound: 0.017025250000000075
+percentage outliers: 1.0256410256410255
+total outliers: 2
+
+
+Estadísticas de la columna :D2
+IQR:0.5373304999999999
+Upper Bound: 3.44245175
+Lower Bound: 1.29312975
+percentage outliers: 0.5128205128205128
+total outliers: 1
+
+
+Estadísticas de la columna :PPE
+IQR:0.11552899999999999
+Upper Bound: 0.42627349999999997
+Lower Bound: -0.0358425
+percentage outliers: 2.564102564102564
+total outliers: 5
+
+

@@ -1,0 +1,66 @@
+Score de MutualInformation de la columna :D2
+ = Scores    0.017913
+Name: D2, dtype: float64
+Score de MutualInformation de la columna :RPDE
+ = Scores    0.037003
+Name: RPDE, dtype: float64
+Score de MutualInformation de la columna :MDVP:RAP
+ = Scores    0.08421
+Name: MDVP:RAP, dtype: float64
+Score de MutualInformation de la columna :Jitter:DDP
+ = Scores    0.093236
+Name: Jitter:DDP, dtype: float64
+Score de MutualInformation de la columna :DFA
+ = Scores    0.095116
+Name: DFA, dtype: float64
+Score de MutualInformation de la columna :MDVP:Shimmer
+ = Scores    0.097736
+Name: MDVP:Shimmer, dtype: float64
+Score de MutualInformation de la columna :MDVP:PPQ
+ = Scores    0.108308
+Name: MDVP:PPQ, dtype: float64
+Score de MutualInformation de la columna :Shimmer:DDA
+ = Scores    0.108726
+Name: Shimmer:DDA, dtype: float64
+Score de MutualInformation de la columna :Shimmer:APQ3
+ = Scores    0.109874
+Name: Shimmer:APQ3, dtype: float64
+Score de MutualInformation de la columna :Shimmer:APQ5
+ = Scores    0.114149
+Name: Shimmer:APQ5, dtype: float64
+Score de MutualInformation de la columna :NHR
+ = Scores    0.116551
+Name: NHR, dtype: float64
+Score de MutualInformation de la columna :MDVP:Shimmer(dB)
+ = Scores    0.118004
+Name: MDVP:Shimmer(dB), dtype: float64
+Score de MutualInformation de la columna :MDVP:Jitter(%)
+ = Scores    0.118663
+Name: MDVP:Jitter(%), dtype: float64
+Score de MutualInformation de la columna :HNR
+ = Scores    0.132462
+Name: HNR, dtype: float64
+Score de MutualInformation de la columna :MDVP:Fhi(Hz)
+ = Scores    0.140713
+Name: MDVP:Fhi(Hz), dtype: float64
+Score de MutualInformation de la columna :MDVP:Jitter(Abs)
+ = Scores    0.15475
+Name: MDVP:Jitter(Abs), dtype: float64
+Score de MutualInformation de la columna :MDVP:Flo(Hz)
+ = Scores    0.174088
+Name: MDVP:Flo(Hz), dtype: float64
+Score de MutualInformation de la columna :MDVP:APQ
+ = Scores    0.182265
+Name: MDVP:APQ, dtype: float64
+Score de MutualInformation de la columna :spread2
+ = Scores    0.192002
+Name: spread2, dtype: float64
+Score de MutualInformation de la columna :MDVP:Fo(Hz)
+ = Scores    0.206593
+Name: MDVP:Fo(Hz), dtype: float64
+Score de MutualInformation de la columna :spread1
+ = Scores    0.221368
+Name: spread1, dtype: float64
+Score de MutualInformation de la columna :PPE
+ = Scores    0.253982
+Name: PPE, dtype: float64

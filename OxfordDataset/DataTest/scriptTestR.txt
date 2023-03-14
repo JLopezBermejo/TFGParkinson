@@ -1,0 +1,71 @@
+install.packages("dplyr")
+install.packages("kohonen")
+install.packages("plot3D")
+install.packages("plot3Drgl")
+
+
+library(kohonen)
+library(dplyr)
+
+
+#Descomentar si se quieren hacer otro tipo de gráficas
+#library(plot3D)
+#library(plot3Drgl)
+
+
+
+
+df <- read.csv('D:/Databases/OxfordDataset/DataTest/IrisDataset.csv')
+class <- df$Class
+df <- select(df,-Class)
+
+set.seed(100)
+df <- na.omit(df) 
+dfScaled <- scale(df,center=T,scale=T)
+
+summary(df)
+
+ejemploSom <- som(dfScaled, grid = somgrid(3,3,"hexagonal"), rlen = 1000) # o 7x7
+
+blue.fade <- function(n){
+   return(rgb(0,0.4,1,alpha=seq(0,1,1/n)))}
+
+plot(ejemploSom, type="count", shape = "straight", palette.name = blue.fade) #de aqui sale la primera imagen de la representacion
+
+BMUs <- table(ejemploSom$unit.classif)
+
+print(length(BMUs))#comprobamos que no hay vacios IMPORTANTE POR QUE CON VACIOS HAY PROBLEMAS
+
+
+distancesSOM <- dist(getCodes(ejemploSom,1))
+
+
+arboldeclusters <- hclust(distancesSOM,method="ward.D2",members=BMUs) #aqui es importante que BMUs y distancesSOM tengan la misma longitud, por eso no tiene que haber vacios
+
+#si el print(length(BMUs)) no es igual al tamaño de la red, en la instruccion anterior no añadimos los miembros
+
+
+clusteres <- cutree(arboldeclusters, k=4)#cortamos el arbol para que de 4 grupos
+
+
+plot(ejemploSom,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[clusteres], shape = "straight") #pintamos los clusteres con las BMUS de cada uno
+add.cluster.boundaries(ejemploSom,clustering=clusteres)#añadimos a los clusters bordes
+
+#de estas lineas sale la segunda imagen
+
+
+
+
+
+> som_cluster <- cutree(hclust(dist(getCodes(ejemploSom,1))), k = 4)
+> plot(ejemploSom,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[som_cluster],
++     shape = "straight")
+> add.cluster.boundaries(ejemploSom,clustering=som_cluster)
+
+
+#con esas lineas sale bien el de 7x7 (basicamente quitar la parte de que sean iguales las distancias y la longitud)
+
+
+
+
+

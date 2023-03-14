@@ -1,0 +1,66 @@
+Score de FeatureSelection de la columna :MDVP:Fhi(Hz)
+pvalor= Scores    5.478255
+Name: MDVP:Fhi(Hz), dtype: float64
+Score de FeatureSelection de la columna :NHR
+pvalor= Scores    7.18327
+Name: NHR, dtype: float64
+Score de FeatureSelection de la columna :DFA
+pvalor= Scores    10.952901
+Name: DFA, dtype: float64
+Score de FeatureSelection de la columna :Jitter:DDP
+pvalor= Scores    14.772666
+Name: Jitter:DDP, dtype: float64
+Score de FeatureSelection de la columna :MDVP:RAP
+pvalor= Scores    14.775226
+Name: MDVP:RAP, dtype: float64
+Score de FeatureSelection de la columna :MDVP:Jitter(%)
+pvalor= Scores    16.192809
+Name: MDVP:Jitter(%), dtype: float64
+Score de FeatureSelection de la columna :MDVP:PPQ
+pvalor= Scores    17.548533
+Name: MDVP:PPQ, dtype: float64
+Score de FeatureSelection de la columna :RPDE
+pvalor= Scores    20.310049
+Name: RPDE, dtype: float64
+Score de FeatureSelection de la columna :MDVP:Jitter(Abs)
+pvalor= Scores    25.001729
+Name: MDVP:Jitter(Abs), dtype: float64
+Score de FeatureSelection de la columna :D2
+pvalor= Scores    25.265912
+Name: D2, dtype: float64
+Score de FeatureSelection de la columna :Shimmer:DDA
+pvalor= Scores    26.525626
+Name: Shimmer:DDA, dtype: float64
+Score de FeatureSelection de la columna :Shimmer:APQ3
+pvalor= Scores    26.52712
+Name: Shimmer:APQ3, dtype: float64
+Score de FeatureSelection de la columna :MDVP:Shimmer(dB)
+pvalor= Scores    27.065484
+Name: MDVP:Shimmer(dB), dtype: float64
+Score de FeatureSelection de la columna :Shimmer:APQ5
+pvalor= Scores    27.145033
+Name: Shimmer:APQ5, dtype: float64
+Score de FeatureSelection de la columna :HNR
+pvalor= Scores    29.015927
+Name: HNR, dtype: float64
+Score de FeatureSelection de la columna :MDVP:APQ
+pvalor= Scores    29.53635
+Name: MDVP:APQ, dtype: float64
+Score de FeatureSelection de la columna :MDVP:Shimmer
+pvalor= Scores    30.1226
+Name: MDVP:Shimmer, dtype: float64
+Score de FeatureSelection de la columna :MDVP:Flo(Hz)
+pvalor= Scores    32.612875
+Name: MDVP:Flo(Hz), dtype: float64
+Score de FeatureSelection de la columna :MDVP:Fo(Hz)
+pvalor= Scores    33.286577
+Name: MDVP:Fo(Hz), dtype: float64
+Score de FeatureSelection de la columna :spread2
+pvalor= Scores    50.343165
+Name: spread2, dtype: float64
+Score de FeatureSelection de la columna :PPE
+pvalor= Scores    75.803195
+Name: PPE, dtype: float64
+Score de FeatureSelection de la columna :spread1
+pvalor= Scores    90.424219
+Name: spread1, dtype: float64
