@@ -10,11 +10,13 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 
 ## :white_check_mark: Tecnologías utilizadas
 
--Python
--R
+- Python
+- R
 
 ## :construction: Issues :construction:
 
-- [x]
-- [ ]
-- [ ]
+- [x] Creación de código para el análisis del dataset
+- [ ] Creación de grupos de características
+- [ ] Creación de redes SOM
+- [ ] Separación de redes SOM en distintos pasos para elegir cual ejecutar
+- [ ] Imágenes del entrenamiento de redes SOM 
