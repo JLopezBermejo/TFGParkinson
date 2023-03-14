@@ -21,3 +21,4 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 - [ ] #4
 - [ ] #5
 - [ ] #6
+- [ ] #7
