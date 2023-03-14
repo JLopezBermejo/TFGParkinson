@@ -13,7 +13,7 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 -Python
 -R
 
-##:construction: Issues :construction:
+## :construction: Issues :construction:
 
 - [x]
 - [ ]
