@@ -6,7 +6,9 @@ En _plotImages_ se encuentran las imágenes de distintos gráficos dobre las car
 
 En _stadistics_ se encuentran algunas estadísticas utilizadas para crear las gráficas encontradas en _plotImages_,y alguna estadística auxiliar más.
 
-La representación gráfica de las redes de neuronas som y el entrenamiento de las mismas se realizará en R, con distintos grupos de características y distintos tamaños de red
+La representación gráfica de las redes de neuronas som y el entrenamiento de las mismas se realizará en R, con distintos grupos de características y distintos tamaños de red.
+
+Existe una prueba de como debería ser la implementación de una red SOM en R en el directorio DataTest, existiendo un fichero .txt llamado scriptTestR.txt donde se encuentran los comandos en R junto a algunas indicaciones.
 
 ## :white_check_mark: Tecnologías utilizadas
 
@@ -15,12 +17,11 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 
 ## :construction: Issues :construction:
 
-* [feature] prueba1 ([#3][i3])
-- [ ] #2
-- [ ] #3
-- [ ] #4
-- [ ] #5
-- [ ] #6
-- [ ] #7
+- [x] https://github.com/JLopezBermejo/TFGParkinson/issues/1
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/2
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/3
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/4
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/5
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/6
+- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/7
 
-[i3]: https://github.com/JLopezBermejo/TFGParkinson/issues/3
