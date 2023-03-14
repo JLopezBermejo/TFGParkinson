@@ -8,12 +8,12 @@ En _stadistics_ se encuentran algunas estadísticas utilizadas para crear las gr
 
 La representación gráfica de las redes de neuronas som y el entrenamiento de las mismas se realizará en R, con distintos grupos de características y distintos tamaños de red
 
-\## :white_check_mark: Tecnologías utilizadas
+## :white_check_mark: Tecnologías utilizadas
 
 -Python
 -R
 
-\##:construction: Issues :construction:
+##:construction: Issues :construction:
 
 - [x]
 - [ ]
