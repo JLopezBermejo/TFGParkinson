@@ -22,3 +22,5 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 - [ ] #5
 - [ ] #6
 - [ ] #7
+
+[i3]: https://github.com/JLopezBermejo/TFGParkinson/issues/3
