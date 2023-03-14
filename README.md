@@ -15,7 +15,7 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 
 ## :construction: Issues :construction:
 
-- [x] #1
+* [feature] prueba1 ([#3][i3])
 - [ ] #2
 - [ ] #3
 - [ ] #4
