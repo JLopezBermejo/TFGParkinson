@@ -17,11 +17,11 @@ Existe una prueba de como debería ser la implementación de una red SOM en R en
 
 ## :construction: Issues :construction:
 
-- [x] https://github.com/JLopezBermejo/TFGParkinson/issues/1
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/2
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/3
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/4
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/5
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/6
-- [ ] https://github.com/JLopezBermejo/TFGParkinson/issues/7
+- [x] Creación de código para el análisis del dataset [https://github.com/JLopezBermejo/TFGParkinson/issues/1]
+- [ ] Creación de grupos de características [https://github.com/JLopezBermejo/TFGParkinson/issues/2]
+- [ ] Creación de redes SOM [https://github.com/JLopezBermejo/TFGParkinson/issues/3]
+- [ ] Separación de redes SOM [https://github.com/JLopezBermejo/TFGParkinson/issues/4]
+- [ ] Imágenes del entrenamiento de redes SOM [https://github.com/JLopezBermejo/TFGParkinson/issues/5]
+- [ ] Creación de directorios para los grupos de características [https://github.com/JLopezBermejo/TFGParkinson/issues/6]
+- [ ] Refactor code [https://github.com/JLopezBermejo/TFGParkinson/issues/7]
 
