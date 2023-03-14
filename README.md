@@ -15,8 +15,9 @@ La representación gráfica de las redes de neuronas som y el entrenamiento de l
 
 ## :construction: Issues :construction:
 
-- [x] Creación de código para el análisis del dataset
-- [ ] Creación de grupos de características
-- [ ] Creación de redes SOM
-- [ ] Separación de redes SOM en distintos pasos para elegir cual ejecutar
-- [ ] Imágenes del entrenamiento de redes SOM 
+- [x] #1
+- [ ] #2
+- [ ] #3
+- [ ] #4
+- [ ] #5
+- [ ] #6
