@@ -26,7 +26,7 @@ dfScaled <- scale(df,center=T,scale=T)
 
 #inicializamos la red con la que entrenaremos
 
-redInit <- somInit(df,10,10,"random")
+redInit <- somInit(dfScaled,10,10,"random")
 
 #ahora entrenamos la red
 
