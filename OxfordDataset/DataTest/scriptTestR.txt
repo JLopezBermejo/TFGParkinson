@@ -1,7 +1,8 @@
 install.packages("dplyr")
 install.packages("kohonen")
-install.packages("plot3D")
-install.packages("plot3Drgl")
+#Descomentar si se quieren hacer otro tipo de gráficas
+#install.packages("plot3D")
+#install.packages("plot3Drgl")
 
 
 library(kohonen)
