@@ -58,3 +58,36 @@ plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1")[cluster2], shape = "s
 plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster3], shape = "straight")
 
 plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
+
+#volvemos a juntar las variables de name y status junto a que neurona ha sido asignada dicho registro
+aux <- cbind(name,G01SOM$unit.classif)
+aux <- cbind(aux,status)
+
+#le asignamos un nombre a la columna de la neurona
+colnames(aux) <- c('name','neurona','status') 
+
+#creamos los datasets con los que trabajaremos para que resulte mas sencillo
+
+
+datasetaux=as.data.frame(aux)
+datasetcluster2aux=as.data.frame(cluster2)
+datasetcluster3aux=as.data.frame(cluster3)
+datasetcluster4aux=as.data.frame(cluster4)
+
+
+# y una función que opere sobre los dataset y una los grupos con los datos
+
+unirCluster <- function(dfAUnir,gruposCluster,nClusters){
+  result <- dfAUnir
+  nameVar <- paste(nClusters,'Nclusters',sep='')
+  result[nameVar] <- NA
+  for (row in 1:nrow(dfAUnir)){
+    neur <- dfAUnir[row,'neurona']
+    neur <- strtoi(neur)
+    group <- gruposCluster[neur,1]
+    result[row,nameVar] <- group
+  }
+
+  return(result)
+}
+
