@@ -91,3 +91,8 @@ unirCluster <- function(dfAUnir,gruposCluster,nClusters){
   return(result)
 }
 
+#ahora unimos los 3 clusters al dataset formado anteriormente
+
+unionClusters <- unirCluster(datasetaux,datasetcluster2aux,2)
+unionClusters <- unirCluster(unionClusters,datasetcluster3aux,3)
+unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
