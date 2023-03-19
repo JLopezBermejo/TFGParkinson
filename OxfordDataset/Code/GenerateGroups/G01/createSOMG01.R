@@ -35,7 +35,7 @@ G01SOM <- som(dfScaled, grid = somgrid(10,10,"hexagonal"), rlen = 1000,init = re
 #representamos la red
 
 purple.fade <- function(n){
-     return(rgb(0,0,0.2,alpha=seq(0,1,1/n)))}
+  return(rgb(0,0,0.2,alpha=seq(0,1,1/n)))}
 plot(G01SOM, type="count", shape = "straight", palette.name = purple.fade)
 
 plot(G01SOM, type="dist.neighbours", shape = "straight")
@@ -87,7 +87,7 @@ unirCluster <- function(dfAUnir,gruposCluster,nClusters){
     group <- gruposCluster[neur,1]
     result[row,nameVar] <- group
   }
-
+  
   return(result)
 }
 
@@ -96,7 +96,3 @@ unirCluster <- function(dfAUnir,gruposCluster,nClusters){
 unionClusters <- unirCluster(datasetaux,datasetcluster2aux,2)
 unionClusters <- unirCluster(unionClusters,datasetcluster3aux,3)
 unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
-
-#guardamos dicho dataset en la carpeta del grupo correspondiente
-
-write.table(unionClusters, file = "D:/TFGParkinson/OxfordDataset/Code/GenerateGroups/G01/G01.txt", sep = ",",row.names = FALSE, col.names = TRUE)
