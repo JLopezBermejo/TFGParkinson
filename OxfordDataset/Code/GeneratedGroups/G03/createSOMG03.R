@@ -7,7 +7,7 @@ library(aweSOM)
 #primeramente ir al directorio con los datos
 directory <- paste(dirname(getwd()),'/GeneratedGroups',sep='')
 
-directory <- paste(directory,'/G01/G01_SC_22_10x10.csv',sep='') 
+directory <- paste(directory,'/G03/G03_SF_16_10x10.csv',sep='') 
 #dependiendo de que grupo queramos utilizar cambiamos el comando anterior al grupo elegido
 
 df <- read.csv(directory)
@@ -99,5 +99,5 @@ unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
 
 #lo exportamos al directorio correspondiente
 
-file <- paste(dirname(getwd()),'/GeneratedGroups/G01/G01.csv',sep='')
+file <- paste(dirname(getwd()),'/GeneratedGroups/G03/G03.txt',sep='')
 write.csv(unionClusters, file,row.names=FALSE,)

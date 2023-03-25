@@ -7,7 +7,7 @@ library(aweSOM)
 #primeramente ir al directorio con los datos
 directory <- paste(dirname(getwd()),'/GeneratedGroups',sep='')
 
-directory <- paste(directory,'/G01/G01_SC_22_10x10.csv',sep='') 
+directory <- paste(directory,'/G02/G02_SC_22_8x8.csv',sep='') 
 #dependiendo de que grupo queramos utilizar cambiamos el comando anterior al grupo elegido
 
 df <- read.csv(directory)
@@ -26,11 +26,11 @@ dfScaled <- scale(df,center=T,scale=T)
 
 #inicializamos la red con la que entrenaremos
 
-redInit <- somInit(dfScaled,10,10,"random")
+redInit <- somInit(dfScaled,8,8,"random")
 
 #ahora entrenamos la red
 
-G01SOM <- som(dfScaled, grid = somgrid(10,10,"hexagonal"), rlen = 1000,init = redInit)
+G01SOM <- som(dfScaled, grid = somgrid(8,8,"hexagonal"), rlen = 1000,init = redInit)
 
 #representamos la red
 
@@ -99,5 +99,5 @@ unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
 
 #lo exportamos al directorio correspondiente
 
-file <- paste(dirname(getwd()),'/GeneratedGroups/G01/G01.csv',sep='')
+file <- paste(dirname(getwd()),'/GeneratedGroups/G02/G02.csv',sep='')
 write.csv(unionClusters, file,row.names=FALSE,)
