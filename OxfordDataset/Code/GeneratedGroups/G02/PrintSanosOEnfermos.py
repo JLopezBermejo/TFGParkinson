@@ -14,8 +14,8 @@ def printSanosOEnfermos(df,sano,red):
     for index,row in df.iterrows():
         if(row['status'] == sano):
             aux = row['neurona'] - 1
-            neuronaRow = int(aux / 8)
-            neuronaColumn = aux % 8
+            neuronaRow = int(aux / 10)
+            neuronaColumn = aux % 10
             red[neuronaRow][neuronaColumn] += 1
 
     neuronaReves = red[::-1]
@@ -36,7 +36,7 @@ def printSanosOEnfermos(df,sano,red):
     plt.close()
 
 
-red = np.zeros((8,8),int)
+red = np.zeros((10,10),int)
 printSanosOEnfermos(df,0,red)
-red = np.zeros((8,8),int)
+red = np.zeros((10,10),int)
 printSanosOEnfermos(df,1,red)

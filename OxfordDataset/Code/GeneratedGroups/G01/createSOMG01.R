@@ -59,6 +59,13 @@ plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster
 
 plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
 
+#procedemos a representar los valores de los pesos por cada feature, por que si se intentan representar juntos no se entiende bien el grafismo
+
+for (j in 1:ncol(df)){
+  plot(G01SOM,type="property",property=getCodes(G01SOM,1)[,j], palette.name=purple.fade,main=colnames(df)[j],cex=0.5, shape = "straight")
+}
+
+
 #volvemos a juntar las variables de name y status junto a que neurona ha sido asignada dicho registro
 aux <- cbind(name,G01SOM$unit.classif)
 aux <- cbind(aux,status)
