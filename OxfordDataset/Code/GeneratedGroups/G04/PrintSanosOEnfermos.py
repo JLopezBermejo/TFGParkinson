@@ -6,9 +6,8 @@ import numpy as np
 
 directory = os.getcwd()
 
-df = pd.read_csv(directory + '\G03.txt')
+df = pd.read_csv(directory + '\G04.csv')
 df = pd.DataFrame(df)
-
 
 
 def printSanosOEnfermos(df,sano,red):

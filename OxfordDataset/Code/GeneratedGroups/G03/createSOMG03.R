@@ -34,20 +34,20 @@ redInit <- somInit(dfScaled,10,10,"random")
 
 #ahora entrenamos la red
 
-G02SOM <- som(dfScaled, grid = somgrid(10,10,"hexagonal"), alpha = c(0.1, 0.05), rlen = 1000,init = redInit)
+G03SOM <- som(dfScaled, grid = somgrid(10,10,"hexagonal"), alpha = c(0.1, 0.05), rlen = 1000,init = redInit)
 
 #representamos la red
 
 purple.fade <- function(n){
   return(rgb(0,0,0.2,alpha=seq(0,1,1/n)))}
-plot(G02SOM, type="count", shape = "straight", palette.name = purple.fade)
+plot(G03SOM, type="count", shape = "straight", palette.name = purple.fade)
 
-plot(G02SOM, type="dist.neighbours", shape = "straight")
+plot(G03SOM, type="dist.neighbours", shape = "straight")
 
-plot(G02SOM, shape = "straight")
+plot(G03SOM, shape = "straight")
 
 #Vemos que clusters ha creado la red
-distancesSOM <- dist(getCodes(G02SOM,1))
+distancesSOM <- dist(getCodes(G03SOM,1))
 cluster <- hclust(distancesSOM)
 plot(cluster,hang=-1,labels=F)
 
@@ -59,20 +59,20 @@ cluster4 <- cutree(cluster, k=4)
 
 #representamos cada uno de ellos para estudiar si existen diferencias a la hora de hacer grupos
 
-plot(G02SOM,type="mapping",bgcol=c("steelblue1","sienna1")[cluster2], shape = "straight")
+plot(G03SOM,type="mapping",bgcol=c("steelblue1","sienna1")[cluster2], shape = "straight")
 
-plot(G02SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster3], shape = "straight")
+plot(G03SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster3], shape = "straight")
 
-plot(G02SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
+plot(G03SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
 
 #procedemos a representar los valores de los pesos por cada feature, por que si se intentan representar juntos no se entiende bien el grafismo
 
 for (j in 1:ncol(df)){
-  plot(G02SOM,type="property",property=getCodes(G02SOM,1)[,j], palette.name=purple.fade,main=colnames(df)[j],cex=0.5, shape = "straight")
+  plot(G03SOM,type="property",property=getCodes(G03SOM,1)[,j], palette.name=purple.fade,main=colnames(df)[j],cex=0.5, shape = "straight")
 }
 
 #volvemos a juntar las variables de name y status junto a que neurona ha sido asignada dicho registro
-aux <- cbind(name,G02SOM$unit.classif)
+aux <- cbind(name,G03SOM$unit.classif)
 aux <- cbind(aux,status)
 
 #le asignamos un nombre a la columna de la neurona
