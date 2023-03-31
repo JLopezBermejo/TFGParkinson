@@ -6,7 +6,7 @@ import numpy as np
 
 directory = os.getcwd()
 
-df = pd.read_csv(directory + '\G03.csv')
+df = pd.read_csv(directory + '\G06.csv')
 df = pd.DataFrame(df)
 
 

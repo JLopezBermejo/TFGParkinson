@@ -36,7 +36,27 @@ def printSanosOEnfermos(df,sano,red):
     plt.close()
 
 
+def printDifSanosEnfermos(df,red):
+    for index,row in df.iterrows():
+        neurona = row['neurona'] - 1
+        neuronaRow = int(neurona / 10)
+        neuronaColumn = neurona % 10
+        if(row['status'] == 0):
+            red[neuronaRow][neuronaColumn] += 1
+        else:
+            red[neuronaRow][neuronaColumn] -= 1
+    neuronaReves = red[::-1]
+    neuronaReves = pd.DataFrame(neuronaReves)
+    s = sn.heatmap(neuronaReves, annot=True,cmap = 'PiYG',xticklabels = False, yticklabels = False)
+    sn.set(rc={'figure.figsize':(10,10)})
+    s.set_xlabel('Mapa de Sanos y Enfermos combinado', fontsize=20)
+    plt.savefig(directory + '/DifSanosEnfermos')
+    plt.close()
+
 red = np.zeros((10,10),int)
 printSanosOEnfermos(df,0,red)
 red = np.zeros((10,10),int)
 printSanosOEnfermos(df,1,red)
+
+red = np.zeros((10,10),int)
+printDifSanosEnfermos(df,red)
