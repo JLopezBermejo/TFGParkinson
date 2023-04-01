@@ -114,3 +114,6 @@ unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
 
 file <- paste(dirname(getwd()),'/GeneratedGroups/G02/G02.csv',sep='')
 write.csv(unionClusters, file,row.names=FALSE,)
+pesosSanosEnfermos <- getCodes(G02SOM)
+file <- paste(dirname(getwd()),'/GeneratedGroups/G02/G02Pesos.csv',sep='')
+write.csv(pesosSanosEnfermos, file,row.names=FALSE,)

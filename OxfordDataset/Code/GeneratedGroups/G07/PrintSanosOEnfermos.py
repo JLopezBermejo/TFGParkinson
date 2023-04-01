@@ -6,7 +6,7 @@ import numpy as np
 
 directory = os.getcwd()
 
-df = pd.read_csv(directory + '\G02.csv')
+df = pd.read_csv(directory + '\G07.csv')
 df = pd.DataFrame(df)
 
 
@@ -14,8 +14,8 @@ def printSanosOEnfermos(df,sano,red):
     for index,row in df.iterrows():
         if(row['status'] == sano):
             aux = row['neurona'] - 1
-            neuronaRow = int(aux / 10)
-            neuronaColumn = aux % 10
+            neuronaRow = int(aux / 8)
+            neuronaColumn = aux % 8
             red[neuronaRow][neuronaColumn] += 1
 
     neuronaReves = red[::-1]
@@ -38,8 +38,8 @@ def printSanosOEnfermos(df,sano,red):
 def printDifSanosEnfermos(df,red):
     for index,row in df.iterrows():
         neurona = row['neurona'] - 1
-        neuronaRow = int(neurona / 10)
-        neuronaColumn = neurona % 10
+        neuronaRow = int(neurona / 8)
+        neuronaColumn = neurona % 8
         if(row['status'] == 0):
             red[neuronaRow][neuronaColumn] += 1
         else:
@@ -62,25 +62,25 @@ def getCoordinateMax(red):
                 mejor = red[i][j]
                 posx = i
                 posy = j
-    return(posx*10 + posy)    
+    return(posx*8 + posy)    
             
             
     
     
     
     
-red = np.zeros((10,10),int)
+red = np.zeros((8,8),int)
 printSanosOEnfermos(df,0,red)
 Neuronaconsanos = getCoordinateMax(red)
 print(Neuronaconsanos)
-red = np.zeros((10,10),int)
+red = np.zeros((8,8),int)
 printSanosOEnfermos(df,1,red)
 Neuronaconenfermos = getCoordinateMax(red)
 print(Neuronaconenfermos)
-red = np.zeros((10,10),int)
+red = np.zeros((8,8),int)
 printDifSanosEnfermos(df,red)
 
-df = pd.read_csv(directory + '\G02Pesos.csv')
+df = pd.read_csv(directory + '\G07Pesos.csv')
 df = pd.DataFrame(df)
 sn.set(rc={'figure.figsize':(40,5)})
 plt.plot(df.iloc[Neuronaconsanos],label='Neurona con mayor número de sanos')
@@ -89,3 +89,4 @@ plt.legend(loc="upper left")
 plt.ylabel('Pesos de las neuronas')
 plt.savefig(directory + '/PesosMayorSanosEnfermos')
 plt.close()
+

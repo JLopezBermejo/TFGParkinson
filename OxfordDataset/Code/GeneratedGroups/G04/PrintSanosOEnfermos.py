@@ -53,10 +53,40 @@ def printDifSanosEnfermos(df,red):
     plt.savefig(directory + '/DifSanosEnfermos')
     plt.close()
 
+def getCoordinateMax(red):
+    mejor = 0
+    posx = 0
+    posy = 0
+    for i in range(len(red)):
+        for j in range(len(red)):
+            if(red[i][j] >= mejor):
+                mejor = red[i][j]
+                posx = i
+                posy = j
+    return(posx*10 + posy)    
+            
+            
+    
+    
+    
+    
 red = np.zeros((10,10),int)
 printSanosOEnfermos(df,0,red)
+Neuronaconsanos = getCoordinateMax(red)
+print(Neuronaconsanos)
 red = np.zeros((10,10),int)
 printSanosOEnfermos(df,1,red)
-
+Neuronaconenfermos = getCoordinateMax(red)
+print(Neuronaconenfermos)
 red = np.zeros((10,10),int)
 printDifSanosEnfermos(df,red)
+
+df = pd.read_csv(directory + '\G04Pesos.csv')
+df = pd.DataFrame(df)
+sn.set(rc={'figure.figsize':(40,5)})
+plt.plot(df.iloc[Neuronaconsanos],label='Neurona con mayor número de sanos')
+plt.plot(df.iloc[Neuronaconenfermos],label='Neurona con mayor número de enfermos')
+plt.legend(loc="upper left")
+plt.ylabel('Pesos de las neuronas')
+plt.savefig(directory + '/PesosMayorSanosEnfermos')
+plt.close()

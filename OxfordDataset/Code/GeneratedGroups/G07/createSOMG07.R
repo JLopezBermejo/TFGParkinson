@@ -1,3 +1,7 @@
+#ESTE ENTRENAMIENTO ES IGUAL QUE G01, CAMBIANDO EL TAMAÑO DE LA RED A 8X8
+
+
+
 #cargamos los packetes
 library(kohonen)
 library(dplyr)
@@ -7,7 +11,7 @@ library(aweSOM)
 #primeramente ir al directorio con los datos
 directory <- paste(dirname(getwd()),'/GeneratedGroups',sep='')
 
-directory <- paste(directory,'/G01/G01_SC_22_10x10.csv',sep='') 
+directory <- paste(directory,'/G07/G07_SC_22_8x8.csv',sep='') 
 #dependiendo de que grupo queramos utilizar cambiamos el comando anterior al grupo elegido
 
 df <- read.csv(directory)
@@ -26,22 +30,24 @@ dfScaled <- scale(df,center=T,scale=T)
 
 #inicializamos la red con la que entrenaremos
 
-redInit <- somInit(dfScaled,10,10,"random")
+redInit <- somInit(dfScaled,8,8,"random")
 
 #ahora entrenamos la red
 
-G01SOM <- som(dfScaled, grid = somgrid(10,10,"hexagonal"), rlen = 1000,init = redInit)
+G07SOM <- som(dfScaled, grid = somgrid(8,8,"hexagonal"), rlen = 1000, init = redInit)
 
 #representamos la red
 
 purple.fade <- function(n){
   return(rgb(0,0,0.2,alpha=seq(0,1,1/n)))}
-plot(G01SOM, type="count", shape = "straight", palette.name = purple.fade)
+plot(G07SOM, type="count", shape = "straight", palette.name = purple.fade)
 
-plot(G01SOM, type="dist.neighbours", shape = "straight")
+plot(G07SOM, type="dist.neighbours", shape = "straight")
+
+plot(G07SOM, shape = "straight")
 
 #Vemos que clusters ha creado la red
-distancesSOM <- dist(getCodes(G01SOM,1))
+distancesSOM <- dist(getCodes(G07SOM,1))
 cluster <- hclust(distancesSOM)
 plot(cluster,hang=-1,labels=F)
 
@@ -53,21 +59,20 @@ cluster4 <- cutree(cluster, k=4)
 
 #representamos cada uno de ellos para estudiar si existen diferencias a la hora de hacer grupos
 
-plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1")[cluster2], shape = "straight")
+plot(G07SOM,type="mapping",bgcol=c("steelblue1","sienna1")[cluster2], shape = "straight")
 
-plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster3], shape = "straight")
+plot(G07SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen")[cluster3], shape = "straight")
 
-plot(G01SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
+plot(G07SOM,type="mapping",bgcol=c("steelblue1","sienna1","yellowgreen","red")[cluster4], shape = "straight")
 
 #procedemos a representar los valores de los pesos por cada feature, por que si se intentan representar juntos no se entiende bien el grafismo
 
 for (j in 1:ncol(df)){
-  plot(G01SOM,type="property",property=getCodes(G01SOM,1)[,j], palette.name=purple.fade,main=colnames(df)[j],cex=0.5, shape = "straight")
+  plot(G07SOM,type="property",property=getCodes(G07SOM,1)[,j], palette.name=purple.fade,main=colnames(df)[j],cex=0.5, shape = "straight")
 }
 
-
 #volvemos a juntar las variables de name y status junto a que neurona ha sido asignada dicho registro
-aux <- cbind(name,G01SOM$unit.classif)
+aux <- cbind(name,G07SOM$unit.classif)
 aux <- cbind(aux,status)
 
 #le asignamos un nombre a la columna de la neurona
@@ -106,8 +111,8 @@ unionClusters <- unirCluster(unionClusters,datasetcluster4aux,4)
 
 #lo exportamos al directorio correspondiente
 
-file <- paste(dirname(getwd()),'/GeneratedGroups/G01/G01.csv',sep='')
+file <- paste(dirname(getwd()),'/GeneratedGroups/G07/G07.csv',sep='')
 write.csv(unionClusters, file,row.names=FALSE,)
-pesosSanosEnfermos <- getCodes(G01SOM)
-file <- paste(dirname(getwd()),'/GeneratedGroups/G01/G01Pesos.csv',sep='')
+pesosSanosEnfermos <- getCodes(G07SOM)
+file <- paste(dirname(getwd()),'/GeneratedGroups/G07/G07Pesos.csv',sep='')
 write.csv(pesosSanosEnfermos, file,row.names=FALSE,)
