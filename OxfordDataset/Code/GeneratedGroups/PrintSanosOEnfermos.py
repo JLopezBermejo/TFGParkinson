@@ -4,18 +4,19 @@ import seaborn as sn
 import matplotlib.pyplot as plt
 import numpy as np
 
-directory = os.getcwd()
-
-df = pd.read_csv(directory + '\G07.csv')
+grupo = input("Introduce Grupo del que extraer la información: ")
+directory = os.getcwd() + '\\' + grupo
+print(directory)
+df = pd.read_csv(directory + '\\' + grupo + '.csv')
 df = pd.DataFrame(df)
 
 
-def printSanosOEnfermos(df,sano,red):
+def printSanosOEnfermos(df,sano,red, Ndim):
     for index,row in df.iterrows():
         if(row['status'] == sano):
             aux = row['neurona'] - 1
-            neuronaRow = int(aux / 8)
-            neuronaColumn = aux % 8
+            neuronaRow = int(aux / Ndim)
+            neuronaColumn = aux % Ndim
             red[neuronaRow][neuronaColumn] += 1
 
     neuronaReves = red[::-1]
@@ -35,11 +36,11 @@ def printSanosOEnfermos(df,sano,red):
     plt.savefig(directory + '/MapaEnfermos')
     plt.close()
 
-def printDifSanosEnfermos(df,red):
+def printDifSanosEnfermos(df,red,Ndim):
     for index,row in df.iterrows():
         neurona = row['neurona'] - 1
-        neuronaRow = int(neurona / 8)
-        neuronaColumn = neurona % 8
+        neuronaRow = int(neurona / Ndim)
+        neuronaColumn = neurona % Ndim
         if(row['status'] == 0):
             red[neuronaRow][neuronaColumn] += 1
         else:
@@ -62,25 +63,25 @@ def getCoordinateMax(red):
                 mejor = red[i][j]
                 posx = i
                 posy = j
-    return(posx*8 + posy)    
+    return(posx*10 + posy)    
             
             
     
     
     
-    
-red = np.zeros((8,8),int)
-printSanosOEnfermos(df,0,red)
+dim = int(input("Introduce el ancho de la red de neuronas (se asume que es cuadrada): "))    
+red = np.zeros((dim,dim),int)
+printSanosOEnfermos(df,0,red,dim)
 Neuronaconsanos = getCoordinateMax(red)
 print(Neuronaconsanos)
-red = np.zeros((8,8),int)
-printSanosOEnfermos(df,1,red)
+red = np.zeros((dim,dim),int)
+printSanosOEnfermos(df,1,red,dim)
 Neuronaconenfermos = getCoordinateMax(red)
 print(Neuronaconenfermos)
-red = np.zeros((8,8),int)
-printDifSanosEnfermos(df,red)
+red = np.zeros((dim,dim),int)
+printDifSanosEnfermos(df,red,dim)
 
-df = pd.read_csv(directory + '\G07Pesos.csv')
+df = pd.read_csv(directory + '\\' + grupo + 'Pesos.csv')
 df = pd.DataFrame(df)
 sn.set(rc={'figure.figsize':(40,5)})
 plt.plot(df.iloc[Neuronaconsanos],label='Neurona con mayor número de sanos')
