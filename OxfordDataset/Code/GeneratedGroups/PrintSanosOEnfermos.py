@@ -6,7 +6,6 @@ import numpy as np
 
 grupo = input("Introduce Grupo del que extraer la información: ")
 directory = os.getcwd() + '\\' + grupo
-print(directory)
 df = pd.read_csv(directory + '\\' + grupo + '.csv')
 df = pd.DataFrame(df)
 
@@ -73,19 +72,20 @@ dim = int(input("Introduce el ancho de la red de neuronas (se asume que es cuadr
 red = np.zeros((dim,dim),int)
 printSanosOEnfermos(df,0,red,dim)
 Neuronaconsanos = getCoordinateMax(red)
-print(Neuronaconsanos)
 red = np.zeros((dim,dim),int)
 printSanosOEnfermos(df,1,red,dim)
 Neuronaconenfermos = getCoordinateMax(red)
-print(Neuronaconenfermos)
 red = np.zeros((dim,dim),int)
 printDifSanosEnfermos(df,red,dim)
 
 df = pd.read_csv(directory + '\\' + grupo + 'Pesos.csv')
 df = pd.DataFrame(df)
 sn.set(rc={'figure.figsize':(40,5)})
-plt.plot(df.iloc[Neuronaconsanos],label='Neurona con mayor número de sanos')
-plt.plot(df.iloc[Neuronaconenfermos],label='Neurona con mayor número de enfermos')
+
+df = pd.DataFrame({'Neurona con mayor número de sanos': df.iloc[Neuronaconsanos],
+                   'Neurona con mayor número de enfermos': df.iloc[Neuronaconenfermos]}, index=df.columns)
+df.plot.bar(rot=0)
+
 plt.legend(loc="upper left")
 plt.ylabel('Pesos de las neuronas')
 plt.savefig(directory + '/PesosMayorSanosEnfermos')
