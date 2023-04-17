@@ -62,7 +62,7 @@ def getCoordinateMax(red):
                 mejor = red[i][j]
                 posx = i
                 posy = j
-    return(posx*10 + posy)    
+    return(posx*red.shape[0] + posy)    
             
             
     
