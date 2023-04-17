@@ -83,7 +83,7 @@ df = pd.DataFrame(df)
 sn.set(rc={'figure.figsize':(40,5)})
 
 df = pd.DataFrame({'Neurona con mayor número de sanos': df.iloc[Neuronaconsanos],
-                   'Neurona con mayor número de enfermos': df.iloc[Neuronaconenfermos]}, index=df.columns)
+                   'Neurona con mayor número de enfermos': df.iloc[0]}, index=df.columns)
 df.plot.bar(rot=0)
 
 plt.legend(loc="upper left")
