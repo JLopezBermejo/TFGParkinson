@@ -82,8 +82,10 @@ df = pd.read_csv(directory + '\\' + grupo + 'Pesos.csv')
 df = pd.DataFrame(df)
 sn.set(rc={'figure.figsize':(40,5)})
 
+print("neurona sana: " + str(Neuronaconsanos))
+print("neurona sana: " + str(Neuronaconenfermos))
 df = pd.DataFrame({'Neurona con mayor número de sanos': df.iloc[Neuronaconsanos],
-                   'Neurona con mayor número de enfermos': df.iloc[0]}, index=df.columns)
+                   'Neurona con mayor número de enfermos': df.iloc[Neuronaconenfermos]}, index=df.columns)
 df.plot.bar(rot=0)
 
 plt.legend(loc="upper left")
